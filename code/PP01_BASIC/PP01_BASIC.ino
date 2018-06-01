@@ -2,7 +2,7 @@
     == PP01_BASIC ==
     
     Simple PP01 example code, which serves as
-    a boilerplate for creating your own projects.
+    a template for creating your own projects.
  
     
     == LED MAPPING ==
