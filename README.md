@@ -1,5 +1,6 @@
 # Párty přítelkyně*
 ***Párty přítelkyně = Party Friend**
+
 [www.party-pritelkyne.cz](http://www.party-pritelkyne.cz)
 
 ## Code
