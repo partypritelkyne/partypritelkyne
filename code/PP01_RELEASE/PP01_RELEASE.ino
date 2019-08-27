@@ -87,7 +87,7 @@ bool bpmAnalysisEnabled = true;
 #define PWM_MODES 6
 byte currentPwm = 0;
 byte pwmSetting = 0;
-byte pwmModes[PWM_MODES] = {0, 100, 160, 230, 250, 254};
+byte pwmModes[PWM_MODES] = {0, 1, 6, 20, 100, 250};
 
 
 /*
@@ -376,7 +376,7 @@ void readBpm(){
     long interval = millis() - lastTimeButtonBpm;
     if(interval > 50) // debouncing
     {
-        if(interval < WAIT_BETWEEN){ // if not first press
+        if(interval < WAIT_BETWEEN && lastTimeButtonBpm > 0){ // if not first press
                            
             animationEnabled = true;
             if(intervalSamples.getSize() == 0){ // If no previous meterings (second real press) reset time
@@ -470,13 +470,13 @@ void sleep() {
  */
 void crudePwm(){
 
-    if(currentPwm == 255){
+    if(currentPwm > pwmModes[pwmSetting]){
         currentPwm = 0;
     }else{
         currentPwm++;
     }
     
-    if(currentPwm >= pwmModes[pwmSetting]){
+    if(currentPwm == 0){
         digitalWrite(LEDS_A, leds[0]);
         digitalWrite(LEDS_B, leds[1]);
         digitalWrite(LEDS_C, leds[2]);
