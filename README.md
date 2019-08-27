@@ -2,13 +2,17 @@
 An official repository for [www.party-pritelkyne.cz](http://www.party-pritelkyne.cz)
 
 ## Code
-There are currently two variants of PP01 Arduino projects:
+There are two variants of PP01 Arduino projects:
 - PP01_RELEASE – main version of the code
 - PP01_BASIC – a template for creating your own projects
 
+There is one variant of PP02 Arduino project:
+- PP02 – main version of the code
+
 ## Manuals
-- [Czech manual in PDF](manuals/pp01-manual-cz.pdf)
-- English manual in PDF (coming soon)
+- [PP01 - Czech manual in PDF](manuals/pp01-manual-cz.pdf)
+- [PP02 - Czech manual in PDF](manuals/pp02-manual-cz.pdf)
+- [PP02 - English manual in PDF](manuals/pp02-manual-en.pdf)
 
 ## How to flash an ATtiny85?
 You can follow [these instructions](https://create.arduino.cc/projecthub/arjun/programming-attiny85-with-arduino-uno-afb829) on Arduino Project Hub. You will need an Arduino programmed as an ISP, a breadboad, a capacitor and some wires. Also mind that the production code is optimized for running at 8 MHz and the 8 MHz bootloader is preinstalled on all *Párty přítelkyně*.
